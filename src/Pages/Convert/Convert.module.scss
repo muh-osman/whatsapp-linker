@@ -1,0 +1,56 @@
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 200px);
+
+  .counter {
+    span {
+      font-size: 22px;
+    }
+  }
+
+  .loader {
+    // height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding-right: 22px;
+  }
+
+  .continue_btn_box {
+    margin-bottom: 32px;
+    button {
+      background-color: #0e0142;
+      outline: none;
+      border-radius: 55px;
+      color: #f3efff;
+      padding: 16px 28px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      display: block;
+      width: fit-content;
+      border: 1px solid #0e0142;
+      transition: 0.1s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f3efff;
+        color: #0e0142;
+      }
+    }
+  }
+
+  .ad {
+    height: 150px;
+    width: 100%;
+    border: 2px dashed #0e0142;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
