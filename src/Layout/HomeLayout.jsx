@@ -1,7 +1,7 @@
 import style from "./HomeLayout.module.scss";
 import { useEffect, useRef, useState } from "react";
 // Router
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 // Images
 import logo from "../Assets/Images/logo.png";
 import uk from "../Assets/Images/uk.svg";
@@ -65,12 +65,13 @@ export default function HomeLayout() {
       ></div>
 
       <header className={style.container}>
-        <div className={style.logo_box}>
+        <Link to="/" className={style.logo_box}>
           <div>
             <img src={logo} alt="Whatsapp linker logo" />
           </div>
           <h1>Linker</h1>
-        </div>
+        </Link>
+
         <div className={style.menu_btn_box}>
           <button ref={btbRef} onClick={menuBtn}>
             <MenuIcon sx={{ fontSize: "32px" }} />
