@@ -5,11 +5,12 @@ import { Adsense } from "@ctrl/react-adsense";
 export default function AdsenseAd() {
   return (
     <Adsense
-      client="ca-pub-7640562161899788"
-      slot="7259870550"
-      style={{ display: "block" }}
-      layout="in-article"
-      format="auto"
+      className="ExampleAdSlot"
+      client="ca-pub-8546849163497745"
+      slot="1410612293"
+      style={{ display: 'block' }}
+      format='auto'
+      responsive='true'
       adTest="on" //Dev Only
     />
   );

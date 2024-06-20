@@ -12,8 +12,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 // i18n
-// import i18n from "./i18n";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import i18n from "../Utils/i18n";
 
 export default function HomeLayout() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -51,9 +51,10 @@ export default function HomeLayout() {
     };
   }, []);
 
-  // const { t } = useTranslation();
+  // Lang
+  const { t } = useTranslation();
   const changeLanguage = (languageCode) => {
-    // i18n.changeLanguage(languageCode);
+    i18n.changeLanguage(languageCode);
   };
 
   return (
@@ -85,7 +86,7 @@ export default function HomeLayout() {
         </div> */}
         <div>
           <NavLink to="/" onClick={closeNav}>
-            Home
+          {t("home")}
           </NavLink>
         </div>
         <div>

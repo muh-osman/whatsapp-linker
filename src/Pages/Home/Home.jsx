@@ -22,6 +22,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput, { isPossiblePhoneNumber } from "react-phone-number-input";
 // QR code
 import QRCode from "react-qr-code";
+import AdsenseAd from "../../Components/AdsenseAd";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -220,6 +221,8 @@ export default function Home() {
           Start chat
         </button>
 
+        {/* <p>Start chat without saving the number!</p> */}
+
         <div className={style.or}>
           <span>Or</span>
         </div>
@@ -365,6 +368,8 @@ export default function Home() {
 
       {/* #AD */}
       <div className={style.ad}>#Ad</div>
+
+      {/* <AdsenseAd/> */}
     </div>
   );
 }
