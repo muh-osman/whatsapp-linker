@@ -136,7 +136,7 @@ export default function Home() {
 
     try {
       await navigator.clipboard.writeText(`https://${domainName}/chat/${num}`);
-      toast.success("WhatsApp link copied to clipboard!");
+      toast.success(t("copy"));
     } catch (error) {
       console.error("Failed to copy phone number to clipboard:", error);
       toast.error(
