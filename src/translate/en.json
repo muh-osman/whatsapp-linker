@@ -91,5 +91,7 @@
   "faq17": "I want to convert a WhatsApp number into a short link?",
   "faq18": "Visit the main page of the WhatsApp Linker website, then enter your mobile phone number, click the conversion button, and your number will appear as a short WhatsApp link after conversion. Copy the link and share it on any app or web page.",
   "faq19": "Is the service secure and compliant with WhatsApp's policy?",
-  "faq20": "The service is completely secure and does not affect your account or number on WhatsApp. It is an additional service that helps those who want to communicate with you to access your WhatsApp number with a single click without the need to save your number as a contact, considering that it is not affiliated with the WhatsApp application."
+  "faq20": "The service is completely secure and does not affect your account or number on WhatsApp. It is an additional service that helps those who want to communicate with you to access your WhatsApp number with a single click without the need to save your number as a contact, considering that it is not affiliated with the WhatsApp application.",
+
+  "chatBtn": "Continue to chat"
 }

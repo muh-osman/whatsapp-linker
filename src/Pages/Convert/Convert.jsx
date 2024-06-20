@@ -1,12 +1,17 @@
 import style from "./Convert.module.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+// i18n
+import { useTranslation } from "react-i18next";
 // Loader
 import PropagateLoader from "react-spinners/PropagateLoader";
 // Counter
 // import SlotCounter from "react-slot-counter";
 
 export default function Convert() {
+  // Lang
+  const { t } = useTranslation();
+
   const [value, setValue] = useState(10);
   let { number } = useParams();
 
@@ -42,15 +47,17 @@ export default function Convert() {
         />
       </div> */}
 
-      <div className={style.loader}>
-        <PropagateLoader color="#32d951" size={25} />
+      <div dir="ltr" className={style.loader}>
+        <PropagateLoader color="#0e0142" size={25} />
       </div>
 
       <div className={style.continue_btn_box}>
-        <button onClick={goToLink}>Continue to chat</button>
+        <button onClick={goToLink}>{t("chatBtn")}</button>
       </div>
 
-      <div dir="auto" className={style.ad}>#Ad</div>
+      <div dir="auto" className={style.ad}>
+        #Ad
+      </div>
     </div>
   );
 }

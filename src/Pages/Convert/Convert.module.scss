@@ -24,7 +24,7 @@
   .continue_btn_box {
     margin-bottom: 32px;
     button {
-      background-color: #0e0142;
+      background-color: #32d951;
       outline: none;
       border-radius: 55px;
       color: #f3efff;
@@ -34,9 +34,9 @@
       text-decoration: none;
       display: block;
       width: fit-content;
-      border: 1px solid #0e0142;
       transition: 0.1s;
       cursor: pointer;
+      border: 1px solid #32d951;
 
       &:hover {
         background-color: #f3efff;
