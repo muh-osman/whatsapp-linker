@@ -43,7 +43,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: 0.3s;
+      transition: 0.2s;
+
+      &:hover {
+        color: #32d951;
+      }
     }
   }
 }
@@ -161,7 +165,7 @@
 // Footer
 .footer {
   background-color: #f3efff;
-  padding: 32px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,6 +173,7 @@
 
   p {
     color: #0e0142;
+    font-size: 14px;
   }
 
   .social_footer {
@@ -184,11 +189,5 @@
         color: #32d951;
       }
     }
-  }
-}
-
-@media (max-width: 575.98px) {
-  .footer {
-    padding: 16px;
   }
 }

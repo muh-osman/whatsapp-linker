@@ -49,6 +49,7 @@ const AccordionSummary = styled((props) => (
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
+    color: "#32d951",
   },
   "& .MuiAccordionSummary-content": {
     marginLeft: theme.spacing(1),
@@ -227,7 +228,7 @@ export default function Home() {
           Copy link
         </button>
         <button onClick={handleSaveAsQr} className={style.save_as_qr_btn}>
-          Save link as QR Code
+          Download link as QR Code
         </button>
       </div>
       {/* End input */}
@@ -290,7 +291,7 @@ export default function Home() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography color={"#8b8795"}>
                 whatsapp linker enables you to create a direct WhatsApp link
                 easily. You can convert the WhatsApp number into a direct
                 WhatsApp link by typing the number and a direct WhatsApp link
@@ -311,7 +312,7 @@ export default function Home() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Yes.</Typography>
+              <Typography  color={"#8b8795"}>Yes.</Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -328,7 +329,7 @@ export default function Home() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography  color={"#8b8795"}>
                 Merchants who use social networks as a platform to market their
                 products and services, and use WhatsApp as their primary means
                 of communication with customers. Public figures and their agents
@@ -352,7 +353,7 @@ export default function Home() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography  color={"#8b8795"}>
                 Direct to the main page of the WhatsApp Linker website, then
                 type the number and a direct WhatsApp link will be generated.
               </Typography>
@@ -361,6 +362,9 @@ export default function Home() {
         </div>
       </div>
       {/* End accordion*/}
+
+      {/* #AD */}
+      <div className={style.ad}>#Ad</div>
     </div>
   );
 }
