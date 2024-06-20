@@ -9,7 +9,7 @@ export default function AdsenseAd() {
       slot="7259870550"
       style={{ display: "block" }}
       layout="in-article"
-      format="fluid"
+      format="auto"
       adTest="on" //Dev Only
     />
   );
