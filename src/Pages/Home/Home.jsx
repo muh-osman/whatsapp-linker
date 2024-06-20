@@ -20,6 +20,9 @@ import "react-toastify/dist/ReactToastify.css";
 //
 import "react-phone-number-input/style.css";
 import PhoneInput, { isPossiblePhoneNumber } from "react-phone-number-input";
+// i18n
+import { useTranslation } from "react-i18next";
+import i18n from "../../Utils/i18n";
 // QR code
 import QRCode from "react-qr-code";
 import AdsenseAd from "../../Components/AdsenseAd";
@@ -63,6 +66,9 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function Home() {
+  // Lang
+  const { t } = useTranslation();
+
   const [expanded, setExpanded] = useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -111,7 +117,7 @@ export default function Home() {
 
   const handleStartChat = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
-      toast.warn("Enter a valid phone number.");
+      toast.warn(t("warn"));
       return;
     }
 
@@ -122,7 +128,7 @@ export default function Home() {
 
   const handleCopyLink = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
-      toast.warn("Enter a valid phone number.");
+      toast.warn(t("warn"));
       return;
     }
 
@@ -147,7 +153,7 @@ export default function Home() {
 
   const handleSaveAsQr = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
-      toast.warn("Enter a valid phone number.");
+      toast.warn(t("warn"));
       return;
     }
 
@@ -174,17 +180,17 @@ export default function Home() {
   return (
     <div className={style.container}>
       {/* Start Hero */}
-      <div className={style.hero}>
+      <div dir="ltr" className={style.hero}>
         <div className={style.hero_text_box}>
-          <h3>Free WhatsApp link generator</h3>
-          <h1>
-            Start a new WhatsApp chat <span>without saving the number.</span>
+          <h3 dir="auto">{t("heroSubTitle")}</h3>
+          <h1 dir="auto">
+            {t("heroTitle")} <span>{t("heroSpan")}</span>
           </h1>
           {/* <p>
           WhatsApp links make it ultra-easy for potential clients to start
           conversations with you instantly, so you capture more contacts.
         </p> */}
-          <a href="#input_box">Start now</a>
+          <a href="#input_box">{t("heroBtn")}</a>
         </div>
         <div className={style.image_box}>
           <img src={hero} alt="hero image" />
@@ -207,7 +213,7 @@ export default function Home() {
 
       {/* Start input */}
       <div className={style.input_container}>
-        <h2>Convert WhatsApp number to link.</h2>
+        <h2>{t("inputTitle")}</h2>
         <div id="input_box" dir="ltr" className={style.input_box}>
           <PhoneInput
             international
@@ -218,20 +224,20 @@ export default function Home() {
         </div>
 
         <button onClick={handleStartChat} className={style.start_chat_btn}>
-          Start chat
+          {t("inputBtn")}
         </button>
 
         {/* <p>Start chat without saving the number!</p> */}
 
         <div className={style.or}>
-          <span>Or</span>
+          <span>{t("or")}</span>
         </div>
 
         <button onClick={handleCopyLink} className={style.copy_link_btn}>
-          Copy link
+          {t("copyLink")}
         </button>
         <button onClick={handleSaveAsQr} className={style.save_as_qr_btn}>
-          Download link as QR Code
+          {t("downloadLink")}
         </button>
       </div>
       {/* End input */}
@@ -239,26 +245,20 @@ export default function Home() {
       {/* Start services*/}
       <div className={style.services_container}>
         <div className={style.services_box}>
-          <h2>The Ultimate WhatsApp Solution for Sales & Support.</h2>
+          <h2>{t("servicesTitle")}</h2>
           <div className={style.the_three_box}>
             <div>
               <div>
                 <LinkIcon sx={{ fontSize: "64px", color: "#32d951" }} />
               </div>
-              <div>
-                Convert the WhatsApp number into a direct link Easy to trade and
-                share.
-              </div>
+              <div>{t("servicesOne")}</div>
             </div>
 
             <div>
               <div>
                 <DialpadIcon sx={{ fontSize: "64px", color: "#32d951" }} />
               </div>
-              <div>
-                WhatsApp chat link: Your customer contacts you without saving
-                the number.
-              </div>
+              <div>{t("servicesTwo")}</div>
             </div>
 
             <div>
@@ -267,10 +267,7 @@ export default function Home() {
                   sx={{ fontSize: "64px", color: "#32d951" }}
                 />
               </div>
-              <div>
-                The WhatsApp link creation service is available to everyone and
-                is free.
-              </div>
+              <div>{t("servicesThree")}</div>
             </div>
           </div>
         </div>
@@ -279,7 +276,7 @@ export default function Home() {
 
       {/* Start accordion*/}
       <div className={style.accordion}>
-        <h2>Frequently Asked Questions.</h2>
+        <h2>{t("faqHomeTitle")}</h2>
         <div>
           <Accordion
             expanded={expanded === "panel1"}
@@ -289,17 +286,10 @@ export default function Home() {
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <Typography sx={{ fontSize: "18px" }}>
-                What is whatsapp linker website?
-              </Typography>
+              <Typography sx={{ fontSize: "18px" }}>{t("qHomeOne")}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography color={"#8b8795"}>
-                whatsapp linker enables you to create a direct WhatsApp link
-                easily. You can convert the WhatsApp number into a direct
-                WhatsApp link by typing the number and a direct WhatsApp link
-                will be created.
-              </Typography>
+              <Typography color={"#8b8795"}>{t("aHomeOne")}</Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -310,12 +300,10 @@ export default function Home() {
               aria-controls="panel2d-content"
               id="panel2d-header"
             >
-              <Typography sx={{ fontSize: "18px" }}>
-                Is WhatsApp Linker a free service?
-              </Typography>
+              <Typography sx={{ fontSize: "18px" }}>{t("qHomeTwo")}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography  color={"#8b8795"}>Yes.</Typography>
+              <Typography color={"#8b8795"}>{t("aHomeTwo")}</Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -328,18 +316,11 @@ export default function Home() {
               id="panel3d-header"
             >
               <Typography sx={{ fontSize: "18px" }}>
-                Who need to create a WhatsApp link?
+                {t("qHomeThree")}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography  color={"#8b8795"}>
-                Merchants who use social networks as a platform to market their
-                products and services, and use WhatsApp as their primary means
-                of communication with customers. Public figures and their agents
-                whose work requires sharing their WhatsApp link. Anyone who
-                wants to share a direct Whatsapp link over the Internet in a
-                simple and flexible way.
-              </Typography>
+              <Typography color={"#8b8795"}>{t("aHomeThree")}</Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -352,14 +333,11 @@ export default function Home() {
               id="panel4d-header"
             >
               <Typography sx={{ fontSize: "18px" }}>
-                How do I make a link to WhatsApp?
+                {t("qHomeFour")}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography  color={"#8b8795"}>
-                Direct to the main page of the WhatsApp Linker website, then
-                type the number and a direct WhatsApp link will be generated.
-              </Typography>
+              <Typography color={"#8b8795"}>{t("aHomeFour")}</Typography>
             </AccordionDetails>
           </Accordion>
         </div>
@@ -367,7 +345,9 @@ export default function Home() {
       {/* End accordion*/}
 
       {/* #AD */}
-      <div className={style.ad}>#Ad</div>
+      <div dir="auto" className={style.ad}>
+        #Ad
+      </div>
 
       {/* <AdsenseAd/> */}
     </div>

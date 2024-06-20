@@ -1,4 +1,35 @@
 {
   "home": "Home",
-  "about": "About"
+  "about": "About",
+  "privacyPolicy": "Privacy policy",
+  "TermsOfUse": "Terms of use",
+  "faq": "FAQ",
+  "copyRight": "WhatsApp Linker © 2024. All rights reserved.",
+
+  "heroSubTitle": "Free WhatsApp link generator",
+  "heroTitle": "Start a new WhatsApp chat ",
+  "heroSpan": "without saving the number.",
+  "heroBtn": "Start now",
+
+  "inputTitle": "Convert WhatsApp number to link.",
+  "inputBtn": "Start chat",
+  "or": "Or",
+  "copyLink": "Copy link",
+  "downloadLink": "Download link as QR Code",
+  "warn": "Enter a valid phone number.",
+
+  "servicesTitle": "The Ultimate WhatsApp Solution for Sales & Support.",
+  "servicesOne": "Convert the WhatsApp number into a direct link Easy to trade and share.",
+  "servicesTwo": "WhatsApp chat link: Your customer contacts you without saving the number.",
+  "servicesThree": "The WhatsApp link creation service is available to everyone and is free.",
+
+  "faqHomeTitle": "Frequently Asked Questions.",
+  "qHomeOne": "What is whatsapp linker website?",
+  "aHomeOne": "whatsapp linker enables you to create a direct WhatsApp link easily. You can convert the WhatsApp number into a direct WhatsApp link by typing the number and a direct WhatsApp link will be created.",
+  "qHomeTwo": "Is WhatsApp Linker a free service?",
+  "aHomeTwo": "Yes!",
+  "qHomeThree": "Who need to create a WhatsApp link?",
+  "aHomeThree": "Merchants who use social networks as a platform to market their products and services, and use WhatsApp as their primary means of communication with customers. Public figures and their agents whose work requires sharing their WhatsApp link. Anyone who wants to share a direct Whatsapp link over the Internet in a simple and flexible way.",
+  "qHomeFour": "How do I make a link to WhatsApp?",
+  "aHomeFour": "Direct to the main page of the WhatsApp Linker website, then type the number and a direct WhatsApp link will be generated."
 }

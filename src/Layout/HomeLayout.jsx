@@ -59,13 +59,13 @@ export default function HomeLayout() {
 
   return (
     <>
-      <div
+      {/* <div
         className={style.overlay}
         style={{ display: isNavOpen ? "block" : "none" }}
         onClick={closeNav}
-      ></div>
+      ></div> */}
 
-      <header className={style.container}>
+      <header dir="ltr" className={style.container}>
         <Link to="/" className={style.logo_box}>
           <div>
             <img src={logo} alt="Whatsapp linker logo" />
@@ -86,31 +86,31 @@ export default function HomeLayout() {
         </div> */}
         <div>
           <NavLink to="/" onClick={closeNav}>
-          {t("home")}
+            {t("home")}
           </NavLink>
         </div>
         <div>
           <NavLink to="about" onClick={closeNav}>
-            About
+            {t("about")}
           </NavLink>
         </div>
         <div>
           <NavLink to="privacy-policy" onClick={closeNav}>
-            Privacy policy
+            {t("privacyPolicy")}
           </NavLink>
         </div>
         <div>
           <NavLink to="terms-of-use" onClick={closeNav}>
-            Terms of use
+            {t("TermsOfUse")}
           </NavLink>
         </div>
         <div>
           <NavLink to="faq" onClick={closeNav}>
-            FAQ
+            {t("faq")}
           </NavLink>
         </div>
 
-        <div className={style.lang}>
+        <div dir="ltr" className={style.lang}>
           <button onClick={() => changeLanguage("ar")}>
             <img src={saudi} alt="arabic language" />
           </button>
@@ -119,7 +119,7 @@ export default function HomeLayout() {
           </button>
         </div>
 
-        <div className={style.social}>
+        <div dir="ltr" className={style.social}>
           <a href="https://www.instagram.com/">
             <InstagramIcon />
           </a>
@@ -136,7 +136,7 @@ export default function HomeLayout() {
 
       {/* Start Footer */}
       <footer className={style.footer}>
-        <div className={style.social_footer}>
+        <div dir="ltr" className={style.social_footer}>
           <a href="https://www.instagram.com/">
             <InstagramIcon />
           </a>
@@ -148,7 +148,7 @@ export default function HomeLayout() {
           </a>
         </div>
         <div>
-          <p>WhatsApp Linker © 2024. All rights reserved.</p>
+          <p>{t("copyRight")}</p>
         </div>
       </footer>
       {/* End Footer */}

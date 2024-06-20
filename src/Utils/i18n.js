@@ -15,7 +15,7 @@ const detectUserLanguage = () => {
   }
 
   // Default language if not previously saved
-  return "en";
+  return "ar";
 };
 
 const resources = {
@@ -41,13 +41,29 @@ const setPageDirection = (lng) => {
   document.documentElement.setAttribute("dir", direction);
 };
 
+// Function to set the font-family based on language
+// const setFontFamily = (lng) => {
+//   const elements = document.querySelectorAll("*");
+//   elements.forEach((element) => {
+//     if (lng === "ar") {
+//       element.style.fontFamily = '"Tajawal", sans-serif';
+//     } else {
+//       element.style.fontFamily = '"Roboto", sans-serif';
+//     }
+//   });
+// };
+
 // Set the initial direction
 setPageDirection(detectUserLanguage());
+
+// Set the initial font-family
+// setFontFamily(detectUserLanguage());
 
 // Save user's language choice to localStorage and update the direction
 i18n.on("languageChanged", (lng) => {
   localStorage.setItem("lang", lng);
   setPageDirection(lng);
+  // setFontFamily(lng);
 });
 
 export default i18n;
