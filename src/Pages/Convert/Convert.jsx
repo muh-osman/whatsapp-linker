@@ -19,7 +19,7 @@ export default function Convert() {
       setValue((prev) => {
         if (prev === 0) {
           clearInterval(interval);
-          window.location.href = `https://wa.me/${number}`;
+          // window.location.href = `https://wa.me/${number}`;
           return prev;
         }
         return prev - 1;
@@ -50,7 +50,7 @@ export default function Convert() {
         <button onClick={goToLink}>Continue to chat</button>
       </div>
 
-      <div className={style.ad}>#Ad</div>
+      <div dir="auto" className={style.ad}>#Ad</div>
     </div>
   );
 }

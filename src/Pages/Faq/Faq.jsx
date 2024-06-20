@@ -1,8 +1,12 @@
 import style from "./Faq.module.scss";
 //
 import faq from "../../Assets/Images/faq.svg";
+// i18n
+import { useTranslation } from "react-i18next";
 
 export default function Faq() {
+  const { t } = useTranslation();
+
   return (
     <div className={style.container}>
       <div className={style.image_box}>
@@ -10,94 +14,47 @@ export default function Faq() {
       </div>
 
       <div className={style.text}>
-        <h1>Frequently Asked Questions</h1>
+        <h1>{t("faq")}</h1>
 
-        <p>What is the WhatsApp Linker website?</p>
+        <p>{t("faq1")}</p>
 
-        <p className={style.answer}>
-          WhatsApp Linker allows you to easily create a direct WhatsApp link.
-          You can convert your WhatsApp number into a direct link through
-          WhatsApp Linker by entering the number, and a direct WhatsApp link
-          will be generated.
-        </p>
+        <p className={style.answer}>{t("faq2")}</p>
 
-        <p>Which entities need to create a WhatsApp link?</p>
+        <p>{t("faq3")}</p>
 
-        <p className={style.answer}>
-          Traders who use social networks as a platform to market their products
-          and services, and use the WhatsApp application as a primary means of
-          communication with clients. Public figures and their agents who
-          require sharing their own WhatsApp link. Anyone who wishes to share a
-          direct WhatsApp link online in a simple and flexible way.
-        </p>
+        <p className={style.answer}>{t("faq4")}</p>
 
-        <p>Is WhatsApp Linker a free service?</p>
+        <p>{t("faq5")}</p>
 
-        <p className={style.answer}>Yes</p>
+        <p className={style.answer}>{t("faq6")}</p>
 
-        <p>Are there any conditions when creating a WhatsApp link?</p>
+        <p>{t("faq7")}</p>
 
-        <p className={style.answer}>
-          Creating a WhatsApp link through WhatsApp Linker is subject to the
-          terms outlined on the Terms of Use page. You can review them and then
-          proceed to the main page to create a WhatsApp link if you have a
-          mobile number and use the WhatsApp application.
-        </p>
+        <p className={style.answer}>{t("faq8")}</p>
 
-        <p>How to register on WhatsApp Linker?</p>
+        <p>{t("faq9")}</p>
 
-        <p className={style.answer}>
-          To subscribe to the WhatsApp Linker website and create a WhatsApp
-          link.
-        </p>
+        <p className={style.answer}>{t("faq10")}</p>
 
-        <p>How do I create a WhatsApp link?</p>
+        <p>{t("faq11")}</p>
 
-        <p className={style.answer}>
-          Go to the main page of the WhatsApp Linker website, then enter the
-          number, and a direct WhatsApp link will be generated.
-        </p>
+        <p className={style.answer}>{t("faq12")}</p>
 
-        <p>
-          What is the benefit of registering on the WhatsApp Linker website?
-        </p>
+        <p>{t("faq13")}</p>
 
-        <p className={style.answer}>
-          You can get a short WhatsApp conversation link for your mobile phone
-          number, making it easy to share online, and anyone can contact you
-          with a single click without the need to save your number as a contact.
-        </p>
+        <p className={style.answer}>{t("faq14")}</p>
 
-        <p>
-          What is the benefit of converting a WhatsApp number into a direct
-          link?
-        </p>
+        <p>{t("faq15")}</p>
 
-        <p className={style.answer}>
-          When converting a WhatsApp number into a direct link, it becomes
-          easier to share and distribute on social networks, facilitating direct
-          WhatsApp conversations through the WhatsApp link without saving the
-          number.
-        </p>
+        <p className={style.answer}>{t("faq16")}</p>
 
-        <p>I want to convert a WhatsApp number into a short link?</p>
+        <p>{t("faq17")}</p>
 
-        <p className={style.answer}>
-          Visit the main page of the WhatsApp Linker website, then enter your
-          mobile phone number, click the conversion button, and your number will
-          appear as a short WhatsApp link after conversion. Copy the link and
-          share it on any app or web page.
-        </p>
+        <p className={style.answer}>{t("faq18")}</p>
 
-        <p>Is the service secure and compliant with WhatsApp's policy?</p>
+        <p>{t("faq19")}</p>
 
-        <p className={style.answer}>
-          The service is completely secure and does not affect your account or
-          number on WhatsApp. It is an additional service that helps those who
-          want to communicate with you to access your WhatsApp number with a
-          single click without the need to save your number as a contact,
-          considering that it is not affiliated with the WhatsApp application.
-        </p>
+        <p className={style.answer}>{t("faq20")}</p>
       </div>
     </div>
   );

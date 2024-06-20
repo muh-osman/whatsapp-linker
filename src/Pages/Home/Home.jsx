@@ -22,7 +22,6 @@ import "react-phone-number-input/style.css";
 import PhoneInput, { isPossiblePhoneNumber } from "react-phone-number-input";
 // i18n
 import { useTranslation } from "react-i18next";
-import i18n from "../../Utils/i18n";
 // QR code
 import QRCode from "react-qr-code";
 import AdsenseAd from "../../Components/AdsenseAd";

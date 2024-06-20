@@ -55,6 +55,7 @@ export default function HomeLayout() {
   const { t } = useTranslation();
   const changeLanguage = (languageCode) => {
     i18n.changeLanguage(languageCode);
+    closeNav();
   };
 
   return (
