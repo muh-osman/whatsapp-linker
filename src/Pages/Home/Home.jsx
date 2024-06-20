@@ -120,7 +120,7 @@ export default function Home() {
       return;
     }
 
-    let num = phoneNumber.replace(/\+/g, "");
+    let num = phoneNumber?.replace(/\+/g, "");
 
     navigate(`/chat/${num}`);
   };
@@ -132,7 +132,7 @@ export default function Home() {
     }
 
     const domainName = window.location.hostname;
-    let num = phoneNumber.replace(/\+/g, "");
+    let num = phoneNumber?.replace(/\+/g, "");
 
     try {
       await navigator.clipboard.writeText(`https://${domainName}/chat/${num}`);
@@ -147,7 +147,7 @@ export default function Home() {
 
   const qrCodeRef = useRef(null);
   const domainName = window.location.hostname;
-  const num = phoneNumber.replace(/\+/g, "");
+  const num = phoneNumber?.replace(/\+/g, "");
   const qrCodeValue = `https://${domainName}/chat/${num}`;
 
   const handleSaveAsQr = async () => {

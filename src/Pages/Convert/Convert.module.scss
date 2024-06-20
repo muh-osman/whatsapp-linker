@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
   min-height: calc(100vh - 200px);
+  background-image: url(../../Assets/Images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   .counter {
     span {
@@ -27,7 +31,7 @@
       background-color: #32d951;
       outline: none;
       border-radius: 55px;
-      color: #f3efff;
+      color: #fff;
       padding: 16px 28px;
       font-size: 18px;
       font-weight: 600;
