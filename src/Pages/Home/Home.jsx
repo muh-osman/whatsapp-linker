@@ -23,6 +23,7 @@ import PhoneInput, { isPossiblePhoneNumber } from "react-phone-number-input";
 import { useTranslation } from "react-i18next";
 // QR code
 import QRCode from "react-qr-code";
+// Ad
 import AdsenseAd from "../../Components/AdsenseAd";
 
 const Accordion = styled((props) => (
@@ -159,11 +160,17 @@ export default function Home() {
     const svgData = new XMLSerializer().serializeToString(svg);
     const img = new Image();
     img.onload = () => {
+      const borderSize = 16;
       const canvas = document.createElement("canvas");
-      canvas.width = img.width;
-      canvas.height = img.height;
+      canvas.width = img.width + 2 * borderSize;
+      canvas.height = img.height + 2 * borderSize;
       const ctx = canvas.getContext("2d");
-      ctx.drawImage(img, 0, 0);
+
+      // Add red border
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.drawImage(img, borderSize, borderSize);
 
       // Trigger download
       const pngFile = canvas.toDataURL("image/png");
@@ -205,8 +212,14 @@ export default function Home() {
       </div>
       {/* End Hero */}
 
-      <div ref={qrCodeRef} style={{ display: "none" }}>
-        <QRCode value={qrCodeValue} />
+      {/* QR code */}
+      <div
+        ref={qrCodeRef}
+        style={{
+          display: "none",
+        }}
+      >
+        <QRCode value={qrCodeValue} bgColor="#fff" size={512} />
       </div>
 
       {/* Start input */}
