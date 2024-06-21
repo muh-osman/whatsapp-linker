@@ -11,10 +11,10 @@
   "heroSpan": "without saving the number.",
   "heroBtn": "Start now",
 
-  "inputTitle": "Convert WhatsApp number to link.",
+  "inputTitle": "Send a WhatsApp message to an unsaved number",
   "inputBtn": "Start chat",
   "or": "Or",
-  "copyLink": "Copy link",
+  "copyLink": "Convert your WhatsApp number into a link",
   "downloadLink": "Download link as QR Code",
   "warn": "Enter a valid phone number.",
   "copy": "WhatsApp link copied to clipboard!",
