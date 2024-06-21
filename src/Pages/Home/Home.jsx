@@ -297,7 +297,9 @@ export default function Home() {
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <Typography sx={{ fontSize: "18px" }}>{t("qHomeOne")}</Typography>
+              <Typography sx={{ fontSize: "18px" }}>
+                &nbsp;{t("qHomeOne")}
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography color={"#8b8795"}>{t("aHomeOne")}</Typography>
@@ -311,7 +313,9 @@ export default function Home() {
               aria-controls="panel2d-content"
               id="panel2d-header"
             >
-              <Typography sx={{ fontSize: "18px" }}>{t("qHomeTwo")}</Typography>
+              <Typography sx={{ fontSize: "18px" }}>
+                &nbsp;{t("qHomeTwo")}
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography color={"#8b8795"}>{t("aHomeTwo")}</Typography>
@@ -327,7 +331,7 @@ export default function Home() {
               id="panel3d-header"
             >
               <Typography sx={{ fontSize: "18px" }}>
-                {t("qHomeThree")}
+                &nbsp;{t("qHomeThree")}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -344,7 +348,7 @@ export default function Home() {
               id="panel4d-header"
             >
               <Typography sx={{ fontSize: "18px" }}>
-                {t("qHomeFour")}
+                &nbsp;{t("qHomeFour")}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>

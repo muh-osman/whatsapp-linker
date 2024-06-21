@@ -24,12 +24,14 @@ export default function HomeLayout() {
   const menuBtn = () => {
     btbRef.current.style.transform = "rotate(-90deg)";
     navRef.current.style.right = "0px";
-    // setIsNavOpen(true);
+    document.body.classList.add("no-scroll");
+    setIsNavOpen(true);
   };
 
   const closeNav = () => {
     btbRef.current.style.transform = "rotate(0deg)";
     navRef.current.style.right = "-320px";
+    document.body.classList.remove("no-scroll");
     setIsNavOpen(false);
   };
 
@@ -55,16 +57,19 @@ export default function HomeLayout() {
   const { t } = useTranslation();
   const changeLanguage = (languageCode) => {
     i18n.changeLanguage(languageCode);
-    closeNav();
   };
 
   return (
     <>
-      {/* <div
+      <div
         className={style.overlay}
-        style={{ display: isNavOpen ? "block" : "none" }}
+        style={{
+          opacity: isNavOpen ? 1 : 0,
+          width: isNavOpen ? "100%" : 0,
+          height: isNavOpen ? "100%" : 0,
+        }}
         onClick={closeNav}
-      ></div> */}
+      ></div>
 
       <header dir="ltr" className={style.container}>
         <Link to="/" className={style.logo_box}>

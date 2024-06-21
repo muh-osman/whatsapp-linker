@@ -45,6 +45,7 @@
       width: fit-content;
       border: 1px solid #0e0142;
       transition: 0.1s;
+      white-space: nowrap;
 
       &:hover {
         background-color: #f3efff;
@@ -205,6 +206,7 @@
   cursor: pointer;
   margin-bottom: 32px;
   border: 1px solid #32d951;
+  white-space: nowrap;
 
   &:hover {
     background-color: #f3efff;
