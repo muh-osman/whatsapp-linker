@@ -46,25 +46,7 @@ function ResponsiveDrawer(props) {
       title: "Dashboard",
       path: "/dashboard",
       icon: <DashboardIcon sx={{ color: "#757575" }} />,
-    },
-    {
-      id: 2,
-      title: "Add",
-      path: "/dashboard/add",
-      icon: <AddBoxIcon sx={{ color: "#757575" }} />,
-    },
-    {
-      id: 3,
-      title: "Edit",
-      path: "/dashboard/edit",
-      icon: <AutoFixHighIcon sx={{ color: "#757575" }} />,
-    },
-    {
-      id: 4,
-      title: "Delete",
-      path: "/dashboard/delete",
-      icon: <DeleteIcon sx={{ color: "#757575" }} />,
-    },
+    }
   ];
 
   const { pathname } = useLocation();

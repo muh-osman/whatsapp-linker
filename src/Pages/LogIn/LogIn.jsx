@@ -1,5 +1,3 @@
-// React router
-import { Link as RouterLink } from "react-router-dom";
 // Mui
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
@@ -14,6 +12,8 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import LoadingButton from "@mui/lab/LoadingButton";
 import Copyright from "../../Components/Copyright";
+// Image
+import background from "../../Assets/Images/background.jpg";
 // API
 import { useLoginApi } from "../../API/useLoginApi";
 
@@ -33,14 +33,14 @@ export default function LogIn() {
   };
 
   return (
-    <Grid container component="main" sx={{ height: "100vh" }}>
+    <Grid dir="ltr" container component="main" sx={{ height: "100vh" }}>
       <Grid
         item
         xs={false}
         sm={4}
         md={7}
         sx={{
-          backgroundImage: "url(https://source.unsplash.com/random?wallpapers)",
+          backgroundImage: `url(${background})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
             t.palette.mode === "light"
@@ -113,7 +113,7 @@ export default function LogIn() {
               Log in
             </LoadingButton>
 
-            <Grid container>
+            {/* <Grid container>
               <Grid item xs>
                 <Link
                   component={RouterLink}
@@ -128,7 +128,7 @@ export default function LogIn() {
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
-            </Grid>
+            </Grid> */}
             <Copyright sx={{ mt: 5 }} />
           </Box>
         </Box>

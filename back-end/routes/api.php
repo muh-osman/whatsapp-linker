@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NumberController;
 
 
 
@@ -35,6 +36,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('posts', PostController::class);
 
 
+    // Show all numbers:      method GET    =>  http://localhost:8000/api/numbers
+    // Create number:         method POST   =>  http://localhost:8000/api/numbers
+    // Show number by id:     method GET    =>  http://localhost:8000/api/numbers/1
+    // Update number by id:   method POST   =>  http://localhost:8000/api/numbers/1?_method=PATCH
+    // Delete number by id:   method DELETE =>  http://localhost:8000/api/numbers/1
+    Route::get('numbers', [NumberController::class, 'index']);
 });
 
 
@@ -54,4 +61,9 @@ Route::middleware('guest')->group(function () {
 
     // API route for resetting the password (http://localhost:8000/api/reset-password)
     Route::post('/reset-password', [UserController::class, 'resetPassword'])->name('password.reset');
+
+
+
+    // Numbers store route
+    Route::post('numbers', [NumberController::class, 'store']);
 });

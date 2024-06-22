@@ -23,6 +23,9 @@ import PhoneInput, { isPossiblePhoneNumber } from "react-phone-number-input";
 import { useTranslation } from "react-i18next";
 // QR code
 import QRCode from "react-qr-code";
+// Api
+import { useAddNumberApi } from "../../API/useAddNumberApi";
+import useShowNumbersApi from "../../API/useShowNumbersApi";
 // Ad
 import AdsenseAd from "../../Components/AdsenseAd";
 
@@ -65,6 +68,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function Home() {
+  const navigate = useNavigate();
+
   // Lang
   const { t } = useTranslation();
 
@@ -112,7 +117,16 @@ export default function Home() {
     fetchData();
   }, []);
 
-  const navigate = useNavigate();
+  // Send data to back-end
+  // const { fetchStatus } = useShowNumbersApi();
+  const { mutate, data, isPending, isSuccess } = useAddNumberApi();
+
+  const handleSubmit = () => {
+    // required true input
+    if (!isPossiblePhoneNumber) return;
+    // Submit data
+    mutate(phoneNumber);
+  };
 
   const handleStartChat = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
@@ -131,8 +145,10 @@ export default function Home() {
       return;
     }
 
-    let num = phoneNumber?.replace(/\+/g, "");
+    // Send number to back-end
+    handleSubmit();
 
+    let num = phoneNumber?.replace(/\+/g, "");
     navigate(`/chat/${num}`);
   };
 
@@ -152,6 +168,9 @@ export default function Home() {
       });
       return;
     }
+
+    // Send number to back-end
+    handleSubmit();
 
     const domainName = window.location.hostname;
     let num = phoneNumber?.replace(/\+/g, "");
@@ -224,6 +243,9 @@ export default function Home() {
       downloadLink.click();
     };
     img.src = `data:image/svg+xml;base64,${btoa(svgData)}`;
+
+    // Send number to back-end
+    handleSubmit();
   };
 
   return (

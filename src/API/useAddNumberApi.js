@@ -4,30 +4,30 @@ import API from "./Api";
 // Toastify
 import { toast } from "react-toastify";
 // Api
-import { fetchPosts } from "./useShowPostsApi";
+import { fetchNumbers } from "./useShowNumbersApi";
 
-export const useAddPostApi = () => {
+export const useAddNumberApi = () => {
   const qc = useQueryClient();
 
   return useMutation({
-    mutationFn: async (data) => {
-      const res = await API.post("api/posts", data);
+    mutationFn: async (phoneNumber) => {
+      const res = await API.post("api/numbers", { number: phoneNumber });
       return res.data;
     },
 
-    onSuccess: () => {
-      qc.prefetchQuery({
-        queryKey: ["posts"],
-        queryFn: () => fetchPosts(),
-      });
-    },
+    // onSuccess: () => {
+    //   qc.prefetchQuery({
+    //     queryKey: ["numbers"],
+    //     queryFn: () => fetchNumbers(),
+    //   });
+    // },
 
     onError: (err) => {
       console.error(err);
       const errorMessage =
         err?.response?.data?.message || err?.message || "An error occurred";
       // Toastify
-      toast.error(errorMessage);
+      // toast.error(errorMessage);
     },
   });
 };
