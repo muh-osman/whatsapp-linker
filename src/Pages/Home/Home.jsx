@@ -15,7 +15,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 // Toastify
-import { toast } from "react-toastify";
+import { Bounce, toast } from "react-toastify";
 //
 import "react-phone-number-input/style.css";
 import PhoneInput, { isPossiblePhoneNumber } from "react-phone-number-input";
@@ -116,7 +116,18 @@ export default function Home() {
 
   const handleStartChat = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
-      toast.warn(t("warn"));
+      toast.warn(t("warn"), {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        rtl: t("rtl"),
+      });
       return;
     }
 
@@ -127,7 +138,18 @@ export default function Home() {
 
   const handleCopyLink = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
-      toast.warn(t("warn"));
+      toast.warn(t("warn"), {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        rtl: t("rtl"),
+      });
       return;
     }
 
@@ -136,7 +158,18 @@ export default function Home() {
 
     try {
       await navigator.clipboard.writeText(`https://${domainName}/chat/${num}`);
-      toast.success(t("copy"));
+      toast.success(t("copy"), {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        rtl: t("rtl"),
+      });
     } catch (error) {
       console.error("Failed to copy phone number to clipboard:", error);
       toast.error(
@@ -152,7 +185,18 @@ export default function Home() {
 
   const handleSaveAsQr = async () => {
     if (!isPossiblePhoneNumber(phoneNumber)) {
-      toast.warn(t("warn"));
+      toast.warn(t("warn"), {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        rtl: t("rtl"),
+      });
       return;
     }
 

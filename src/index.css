@@ -32,7 +32,3 @@ body {
 .PhoneInput {
   width: 100%;
 }
-
-.Toastify__toast-body div {
-  text-align: center !important;
-}
