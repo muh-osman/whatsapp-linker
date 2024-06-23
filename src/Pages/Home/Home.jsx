@@ -25,14 +25,12 @@ import { useTranslation } from "react-i18next";
 import QRCode from "react-qr-code";
 // Api
 import { useAddNumberApi } from "../../API/useAddNumberApi";
-import useShowNumbersApi from "../../API/useShowNumbersApi";
 // Ad
-import AdsenseAd from "../../Components/AdsenseAd";
+
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  // border: `1px solid ${theme.palette.divider}`,
   marginBottom: "8px",
   "&:not(:last-child)": {
     borderBottom: 0,
@@ -118,7 +116,6 @@ export default function Home() {
   }, []);
 
   // Send data to back-end
-  // const { fetchStatus } = useShowNumbersApi();
   const { mutate, data, isPending, isSuccess } = useAddNumberApi();
 
   const handleSubmit = () => {

@@ -36,8 +36,3 @@ body {
 th {
   font-weight: 700 !important;
 }
-
-.css-1wjk1gj-MuiTable-root,
-.css-quj9j6-MuiTable-root {
-  min-width: unset !important;
-}
